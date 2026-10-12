@@ -8,6 +8,8 @@ Personal food review blog/website
 4. Evaluate and Improve - Identify changes, new requirements and improvements.
 5. Repeat for the next iteration.
 
+---
+
 ## The First Version Core Features
 | Feature | Purpose|
 |---|---|
@@ -19,9 +21,44 @@ Personal food review blog/website
 | Admin management     | Privately create, edit publish and delete content |
 | About and contact    | Introduce, way for visitor to contact and link to other social |
 
+---
+
 ## Technology Stack
 | Area | Technology| Why|
 |---|---|---|
 | Framework | ASP.NET Core | Fullstack in one, fast and secure |
 | Language | C# | Relative to ASP.NET |
 | Database | SQL Server Express |  |
+
+Under ASP.NET Core, razor pages to produce the frontend
+With C# and ASP.NET Core MVC to handle the backend or routings between pages
+And with SQL Server Express to store information about eatery and review
+
+---
+
+## Initial Database Structure
+Eatery
+- EateryId (PK), Name (of eatery), Type (of cuisine), Address (of eater), Latitude (co-ordinates of eatery), Longtitude (co-ordinates of eatery)
+Reviews
+- ReviewId (PK), EateryId (FK), Title (of review), Content (about the food/drink), Rating (of the food/drink), VisitDate, PublishedAt
+ReviewMedia
+- MediaId, ReviewId
+ReviewItems
+- ItemId, ReviewId
+
+---
+
+## First Iteration Security Consideration
+| Identified Potential Concern | Approach |
+|---|---|
+| Authorisation               |  | 
+| SQL injection               |  | 
+| HTTPS                       |  | 
+| Website/Application secrets |  | 
+| Error handling              |  | 
+
+---
+
+## Consideration 
+- Search Engine Optimisation (SEO)
+- Media performance 
